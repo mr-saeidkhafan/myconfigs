@@ -2,6 +2,13 @@
 # ~/.bashrc
 #
 
+# vi mode for bash
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+bind -m vi-command 'v: ""'
+bind '"jj":vi-movement-mode'
+
 # set tmux as default shell
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
