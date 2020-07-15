@@ -460,10 +460,10 @@ globalkeys = my_table.join(
     --         {description = "show weather", group = "widgets"}),
 
     -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("light -A 10") end,
-              {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("light -U 10") end,
-              {description = "-10%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("light -A 5") end,
+              {description = "+5%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("light -U 5") end,
+              {description = "-5%", group = "hotkeys"}),
 
     -- ALSA volume control
     awful.key({ }, "XF86AudioRaiseVolume",
@@ -785,3 +785,6 @@ awful.util.spawn_with_shell("xset -b")
 awful.util.spawn_with_shell("xfce4-power-manager")
 awful.util.spawn_with_shell("xfce4-screensaver")
 awful.util.spawn_with_shell("mkdir /tmp/daily")
+awful.util.spawn_with_shell("pacman -Q 1>/dev/null")
+awful.util.spawn_with_shell("pip freeze 1>/dev/null")
+awful.util.spawn_with_shell("pip2 freeze 1>/dev/null")
