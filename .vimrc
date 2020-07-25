@@ -5,7 +5,6 @@ Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf'
-Plug 'morhetz/gruvbox'
 Plug 'alvan/vim-closetag'
 Plug 'mbbill/undotree'
 
@@ -47,11 +46,9 @@ map <F7> gg=G<C-o><C-o>
 imap jj <Esc>
 
 " style stuffs
-colorscheme gruvbox
 set background=dark
 
 " setters
-set visualbell
 set smartcase
 set hlsearch
 set incsearch
@@ -59,30 +56,21 @@ set ts=4 sw=4
 set splitbelow
 set splitright
 set noswapfile
-set mouse=a
 set clipboard=unnamedplus
 syntax on
 set laststatus=2
 set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L\ 
+set visualbell
 
 " cursor custom style
-if &term =~? "xterm" || &term =~? "rxvt"
-	let &t_SI = "\<Esc>[6 q"
-	let &t_EI = "\<Esc>[1 q"
-	autocmd VimLeave * let &t_me = "\<Esc>[1 q"
-endif
-
-" gui configs
-set guioptions-=T
-set guioptions-=m
-set guioptions=Ace
-set guifont=Noto\ Sans\ Mono\ 10
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 " custom colors
-hi Comment ctermfg=46 guifg=green
-hi Special ctermfg=12
-hi Normal ctermfg=white guifg=white ctermbg=NONE guibg=black
-hi String ctermfg=white guifg=white
-hi Function ctermfg=white cterm=bold guifg=white gui=bold
-hi Special ctermfg=white cterm=bold guifg=white gui=bold
-hi Visual ctermfg=white ctermbg=black guifg=white guibg=black
+hi Comment ctermfg=46
+hi Special ctermfg=red
+hi Normal ctermfg=white
+hi String ctermfg=173
+hi Function ctermfg=white cterm=bold
+"hi Special ctermfg=white cterm=bold
+hi Visual ctermfg=black ctermbg=white

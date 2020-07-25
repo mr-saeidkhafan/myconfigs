@@ -26,7 +26,6 @@ alias dir="dir --color=auto"
 alias ip="ip -color=auto"
 alias diff="diff --color=auto"
 alias dmesg="dmesg --color=always"
-export TERM=screen-256color
 
 # less config
 export LESS=-R
@@ -39,8 +38,7 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 
-
-PS1="🔸\t $(if [[ ${EUID} == 0 ]]; then echo '\h'; else echo '\u' ;fi)\[\e[36m\]\$(parse_git_branch)\[\e[00m\]\[\033[01;36m\] \w \$([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[01;36m\] \")\\$\[\033[00m\] "
+PS1="\t $(if [[ ${EUID} == 0 ]]; then echo '\h'; else echo '\u' ;fi)\[\e[36m\]\$(parse_git_branch)\[\e[00m\]\[\033[01;36m\] \w \$([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[01;36m\] \")\\$\[\033[00m\] "
 
 # custom alias
 alias py=python
