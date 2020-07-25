@@ -72,5 +72,5 @@ hi Special ctermfg=red
 hi Normal ctermfg=white
 hi String ctermfg=173
 hi Function ctermfg=white cterm=bold
-"hi Special ctermfg=white cterm=bold
+hi Number ctermfg=red
 hi Visual ctermfg=black ctermbg=white
