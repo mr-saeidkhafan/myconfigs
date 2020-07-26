@@ -19,7 +19,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
-PS1="\t \u@\h (\W)\$(parse_git_branch) $ "
+PS1="🔸\t \u@\h (\W)\$(parse_git_branch)$ "
 
 # coloring stuffs
 alias ls="ls --color=auto"
