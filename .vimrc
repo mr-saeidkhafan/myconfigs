@@ -7,6 +7,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf'
 Plug 'alvan/vim-closetag'
 Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -46,6 +47,9 @@ map <F7> gg=G<C-o><C-o>
 imap jj <Esc>
 
 " style stuffs
+syntax enable
+syntax on
+colorscheme gruvbox
 set background=dark
 
 " setters
@@ -57,7 +61,6 @@ set splitbelow
 set splitright
 set noswapfile
 set clipboard=unnamedplus
-syntax on
 set laststatus=2
 set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L\ 
 set visualbell
@@ -67,10 +70,10 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 " custom colors
-hi Comment ctermfg=46
-hi Special ctermfg=red
-hi Normal ctermfg=white
-hi String ctermfg=173
-hi Function ctermfg=white cterm=bold
+hi Comment ctermfg=red
 hi Number ctermfg=red
-hi Visual ctermfg=black ctermbg=white
+hi Normal ctermfg=white ctermbg=black
+hi String ctermfg=173
+hi Function ctermfg=red
+hi Number ctermfg=red
+hi Visual ctermfg=white ctermbg=black
