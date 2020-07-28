@@ -53,9 +53,10 @@ colorscheme gruvbox
 set background=dark
 
 " setters
-set smartcase
 set hlsearch
 set incsearch
+set smartcase
+set ignorecase
 set ts=4 sw=4
 set splitbelow
 set splitright
