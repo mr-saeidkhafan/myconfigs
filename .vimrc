@@ -38,7 +38,7 @@ let g:fzf_preview_window = 'right:60%'
 nnoremap <C-p> :FZF --preview=head\ -50\ {}<Cr>
 
 " shortcut for opening my file manager
-map <F9> :call system('pcmanfm')<CR>
+map <F9> :call system('thunar')<CR>
 
 " formatting
 map <F7> gg=G<C-o><C-o>
@@ -61,7 +61,6 @@ set ts=4 sw=4
 set splitbelow
 set splitright
 set noswapfile
-set clipboard=unnamedplus
 set laststatus=2
 set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L\ 
 set visualbell
