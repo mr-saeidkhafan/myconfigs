@@ -57,7 +57,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "xfce4-terminal", "unclutter -root" }) -- entries must be separated by commas
+-- run_once({ "xfce4-terminal", "unclutter -root" }) -- entries must be separated by commas
 
 -- This function implements the XDG autostart specification
 --[[
@@ -95,7 +95,7 @@ local cycle_prev   = true -- cycle trough all previous client or just the first 
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = os.getenv("GUI_EDITOR") or "geany"
 local browser      = os.getenv("BROWSER") or "firefox"
-local scrlocker    = "xflock4"
+local scrlocker    = "xfce4-screensaver-command -l"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "I", "II", "III", "IV" }
@@ -255,13 +255,28 @@ root.buttons(my_table.join(
 -- {{{ Key bindings
 globalkeys = my_table.join(
 	-- custom keys
+    awful.key({ altkey, "Control" }, "0", function() awful.util.spawn("shutdown now") end,
+              {description = "shutdown the machine", group = "hotkeys"}),
+
+    awful.key({ altkey, "Control" }, "9", function() awful.util.spawn("shutdown -r now") end,
+              {description = "reboot machine", group = "hotkeys"}),
+
     awful.key({ modkey }, "e", function() awful.util.spawn("thunar /home/core/") end,
               {description = "file explorer", group = "hotkeys"}),
+
+    awful.key({ modkey }, "c", function() awful.util.spawn("speedcrunch") end,
+              {description = "calculator", group = "hotkeys"}),
+
+    awful.key({ modkey }, "d", function() awful.util.spawn("stardict") end,
+              {description = "dictionary", group = "hotkeys"}),
 
     awful.key({ modkey }, "t", function() awful.util.spawn("thunderbird") end,
               {description = "email client", group = "hotkeys"}),
 
     awful.key({ }, "Print", function() awful.util.spawn("xfce4-screenshooter") end,
+              {description = "take a screenshot", group = "hotkeys"}),
+
+    awful.key({ "Shift" }, "Print", function() awful.util.spawn("xfce4-screenshooter -r") end,
               {description = "take a screenshot", group = "hotkeys"}),
 
     -- X screen locker
@@ -439,38 +454,40 @@ globalkeys = my_table.join(
     -- awful.key({ altkey, }, "w", function () if beautiful.weather then beautiful.weather.show(7) end end,
     --           {description = "show weather", group = "widgets"}),
 	
+	--  j
+	--  o
 	--  brightness controll
-    awful.key({ modkey }, "#87", function () os.execute("echo 10 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#87", function () awful.spawn.with_shell("echo 10 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "+10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#88", function () os.execute("echo 20 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#88", function () awful.spawn.with_shell("echo 20 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#89", function () os.execute("echo 30 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#89", function () awful.spawn.with_shell("echo 30 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#83", function () os.execute("echo 40 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#83", function () awful.spawn.with_shell("echo 40 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#84", function () os.execute("echo 50 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#84", function () awful.spawn.with_shell("echo 50 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#85", function () os.execute("echo 60 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#85", function () awful.spawn.with_shell("echo 60 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "+10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#79", function () os.execute("echo 70 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#79", function () awful.spawn.with_shell("echo 70 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#80", function () os.execute("echo 80 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#80", function () awful.spawn.with_shell("echo 80 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#81", function () os.execute("echo 90 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#81", function () awful.spawn.with_shell("echo 90 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
-    awful.key({ modkey }, "#90", function () os.execute("echo 100 > /sys/class/backlight/nv_backlight/brightness") end,
+    awful.key({ modkey }, "#90", function () awful.spawn.with_shell("echo 100 > /sys/class/backlight/nv_backlight/brightness") end,
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
     awful.key({ }, "XF86AudioRaiseVolume",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+            os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
     awful.key({ }, "XF86AudioLowerVolume",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+            os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
             beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),
@@ -533,7 +550,7 @@ globalkeys = my_table.join(
     --]]
     -- dmenu
     awful.key({ modkey }, "r", function ()
-            os.execute(string.format("dmenu_run -i -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
+            os.execute(string.format("dmenu_run -c -l 20 -i -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
             beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
         end,
         {description = "show dmenu", group = "launcher"}),
@@ -778,4 +795,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- auto start apps
 awful.util.spawn("nm-applet")
 awful.util.spawn("mkdir /tmp/daily")
-awful.util.spawn("redshift-gtk -l 35.7:51.4 -t 5700:4500")
+awful.util.spawn("redshift-gtk -l 35.7:51.4 -t 5700:3000")
+awful.util.spawn("xfce4-power-manager")
+awful.util.spawn("xfce4-screensaver")
+awful.util.spawn("setxkbmap -option grp:switch,grp_led:scroll,grp:alt_shift_toggle us,ir")
