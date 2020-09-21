@@ -793,7 +793,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- auto start apps
+
 awful.util.spawn("nm-applet")
+awful.util.spawn("xset -b")
 awful.util.spawn("mkdir /tmp/daily")
 awful.util.spawn("redshift-gtk -l 35.7:51.4 -t 5700:3000")
 awful.util.spawn("xfce4-power-manager")
