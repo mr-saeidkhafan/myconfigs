@@ -258,7 +258,7 @@ globalkeys = my_table.join(
     awful.key({ altkey, "Control" }, "0", function() awful.util.spawn("shutdown now") end,
               {description = "shutdown the machine", group = "hotkeys"}),
 
-    awful.key({ altkey, "Control" }, "9", function() awful.util.spawn("shutdown -r now") end,
+    awful.key({ altkey, "Control" }, "1", function() awful.util.spawn("shutdown -r now") end,
               {description = "reboot machine", group = "hotkeys"}),
 
     awful.key({ modkey }, "e", function() awful.util.spawn("thunar /home/core/") end,
@@ -295,10 +295,10 @@ globalkeys = my_table.join(
     --        {description = "go back", group = "tag"}),
 
     -- Non-empty tag browsing
-    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
-              {description = "view  previous nonempty", group = "tag"}),
-    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
-              {description = "view  previous nonempty", group = "tag"}),
+    -- awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
+    --           {description = "view  previous nonempty", group = "tag"}),
+    -- awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
+    --           {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
     awful.key({ altkey,           }, "j",
