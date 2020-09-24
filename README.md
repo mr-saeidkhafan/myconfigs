@@ -17,5 +17,3 @@
 
 	i also added shortcuts for running .sh files in bashrc file.
 
-
-### these are my custom configs and feel free to use it
