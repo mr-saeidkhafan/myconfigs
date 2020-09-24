@@ -28,6 +28,10 @@ alias dir="dir --color=auto"
 alias ip="ip -color=auto"
 alias diff="diff --color=auto"
 alias dmesg="dmesg --color=always"
+# vpn connection
+alias vpns="cd ~/mydir/vpn/ && sudo ./start.sh"
+alias vpnr="cd ~/mydir/vpn/ && sudo ./reset.sh"
+alias vpnc="cd ~/mydir/vpn/ && sudo ./config.sh"
 
 # less config
 export LESS=-R
@@ -46,11 +50,13 @@ alias ll="ls -alhtrF --time-style=long-iso"
 alias dl="cd /tmp/daily"
 alias tk="tmux kill-session -t"
 alias tka="tmux kill-session -a"
+alias jn="jupyter-notebook"
+alias rm="rm -i"
 
 # path and python path
 export PYTHONPATH="/home/core/.local/bin/python3.8"
 export PATH=$PATH:/home/core/.local/bin
-export PATH=$PATH:/core/java/jre1.6.0_24/bin/
+export PATH=$PATH:/home/core/java/jre1.6.0_24/bin/
 export PATH=$PATH:/home/core/.gem/ruby/2.7.0/bin
 export PATH=$PATH:/root/.gem/ruby/2.7.0/bin
 
