@@ -28,10 +28,6 @@ alias dir="dir --color=auto"
 alias ip="ip -color=auto"
 alias diff="diff --color=auto"
 alias dmesg="dmesg --color=always"
-# vpn connection
-alias vpns="cd ~/mydir/vpn/ && sudo ./start.sh"
-alias vpnr="cd ~/mydir/vpn/ && sudo ./reset.sh"
-alias vpnc="cd ~/mydir/vpn/ && sudo ./config.sh"
 
 # less config
 export LESS=-R
@@ -45,13 +41,16 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 # custom alias
 alias py=python
+alias rm="rm -i"
 alias pj="cd ~/mydir/projects/"
 alias ll="ls -alhtrF --time-style=long-iso"
 alias dl="cd /tmp/daily"
 alias tk="tmux kill-session -t"
 alias tka="tmux kill-session -a"
 alias jn="jupyter-notebook"
-alias rm="rm -i"
+alias showip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias vpnc="cd /home/core/mydir/confs/vpn/ && ./start.sh"
+alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh"
 
 # path and python path
 export PYTHONPATH="/home/core/.local/bin/python3.8"
