@@ -6,4 +6,11 @@
 	- tmux config
 	- vimrc file
 	- custom patched dmenu
+	- tor tunnel all traffic network
 
+## needed packages 
+	- awesome
+	- pip
+	- tmux
+	- vim
+	- tor
