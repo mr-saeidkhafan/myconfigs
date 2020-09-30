@@ -1,4 +1,4 @@
-# my configs backup
+# My Configs Backup
 
 	- awesome window manager config file and theme config
 	- pacman packages
@@ -8,7 +8,7 @@
 	- custom patched dmenu
 	- tor tunnel all traffic network
 
-## needed packages 
+## Requirement
 	- awesome
 	- pip
 	- tmux
