@@ -49,15 +49,13 @@ alias tk="tmux kill-session -t"
 alias tka="tmux kill-session -a"
 alias jn="jupyter-notebook"
 alias showip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias vpnc="cd /home/core/mydir/confs/vpn/ && ./start.sh"
-alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh"
+alias vpnc="cd /home/core/mydir/confs/vpn/ && ./start.sh && cd -"
+alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh && cd -"
 
 # path and python path
 export PYTHONPATH="/home/core/.local/bin/python3.8"
 export PATH=$PATH:/home/core/.local/bin
-export PATH=$PATH:/home/core/java/jre1.6.0_24/bin/
-export PATH=$PATH:/home/core/.gem/ruby/2.7.0/bin
-export PATH=$PATH:/root/.gem/ruby/2.7.0/bin
+export PATH=$PATH:/usr/lib/jvm/default/bin
 
 # bash completion
 complete -cf sudo
