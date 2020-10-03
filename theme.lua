@@ -16,7 +16,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper                                 = theme.dir .. "/wall.jpg"
-theme.font                                      = "Terminus 9"
+theme.font                                      = "hack 9"
 theme.fg_normal                                 = "#ffffff"
 theme.fg_focus                                  = "#4d9dff"
 theme.fg_urgent                                 = "#CC9393"
@@ -103,7 +103,7 @@ local clock = awful.widget.watch(
 theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
-        font = "Terminus 10",
+        font = "Hack 10",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -170,7 +170,7 @@ theme.mail = lain.widget.imap({
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local mem = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. mem_now.used .. "MB "))
+        widget:set_markup(markup.font("Terminus 9.5", " " .. mem_now.used .. "MB "))
     end
 })
 
@@ -178,7 +178,7 @@ local mem = lain.widget.mem({
 local cpuicon = wibox.widget.imagebox(theme.widget_cpu)
 local cpu = lain.widget.cpu({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. cpu_now.usage .. "% "))
+        widget:set_markup(markup.font("Terminus 9.5", " " .. cpu_now.usage .. "% "))
     end
 })
 
@@ -186,7 +186,7 @@ local cpu = lain.widget.cpu({
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
 local temp = lain.widget.temp({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
+        widget:set_markup(markup.font("Terminus 9.5", " " .. coretemp_now .. "°C "))
     end
 })
 
@@ -215,9 +215,9 @@ local bat = lain.widget.bat({
             else
                 baticon:set_image(theme.widget_battery)
             end
-            widget:set_markup(markup.font(theme.font, " " .. bat_now.perc .. "% "))
+            widget:set_markup(markup.font("Terminus 9.5", " " .. bat_now.perc .. "% "))
         else
-            widget:set_markup(markup.font(theme.font, " AC "))
+            widget:set_markup(markup.font("Terminus 9.5", " AC "))
             baticon:set_image(theme.widget_ac)
         end
     end
@@ -237,7 +237,7 @@ theme.volume = lain.widget.alsa({
             volicon:set_image(theme.widget_vol)
         end
 
-        widget:set_markup(markup.font(theme.font, " " .. volume_now.level .. "% "))
+        widget:set_markup(markup.font("Terminus 9.5", " " .. volume_now.level .. "% "))
     end
 })
 theme.volume.widget:buttons(awful.util.table.join(
