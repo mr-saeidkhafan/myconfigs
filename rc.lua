@@ -793,7 +793,14 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- auto start apps
-
+awful.util.spawn("xfdesktop", {
+		border_width = 0,
+		border_color = 0,
+		sticky = true,
+		floating = true,
+		focusable = false,
+		below = true
+	})
 awful.util.spawn("nm-applet")
 awful.util.spawn("xset -b")
 awful.util.spawn("mkdir /tmp/daily")
