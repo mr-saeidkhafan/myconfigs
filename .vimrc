@@ -58,6 +58,33 @@ imap jj <Esc>
 " auto complition
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#enable_typeinfo = 0
+let g:deoplete#disable_auto_complete = 1
+" use <tab> / <s-tab> to cycle through completions
+function! s:check_back_space() abort "{{{
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
+inoremap <silent><expr> <C-n>
+			\ pumvisible() ? "\<C-n>" :
+			\ <SID>check_back_space() ? "\<C-n>" :
+			\ deoplete#manual_complete()
+
+inoremap <silent><expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" automatically select the first match
+set completeopt+=noinsert
+
+" don't insert a newline when selecting with <Enter>
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>" : "\<CR>")
+
+" matchers
+" head   - exact matches
+" length - don't show typed word
+call deoplete#custom#source('_', 'matchers', ['matcher_head', 'terminal', 'matcher_length'])
+
+" sort results alphabetically
+call deoplete#custom#source('_', 'sorters', ['sorter_word'])
 
 " jedi
 let g:jedi#auto_initialization = 1
