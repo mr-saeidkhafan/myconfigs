@@ -9,14 +9,11 @@ Plug 'alvan/vim-closetag'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
 Plug 'davidhalter/jedi-vim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'deoplete-plugins/deoplete-jedi'
-if has('nvim')
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-	Plug 'Shougo/deoplete.nvim'
-	Plug 'roxma/nvim-yarp'
-	Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Shougo/echodoc.vim'
 
 call plug#end()
 
@@ -55,10 +52,15 @@ map <F7> gg=G<C-o><C-o>
 " changing the super key in insert mode
 imap jj <Esc>
 
+" echo doc
+let g:echodoc#enable_at_startup = 1
+
 " auto complition
+set noshowmode
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#enable_typeinfo = 0
+let g:deoplete#sources#jedi#enable_typeinfo = 1
 let g:deoplete#disable_auto_complete = 1
+set completeopt-=preview
 " use <tab> / <s-tab> to cycle through completions
 function! s:check_back_space() abort "{{{
 	let col = col('.') - 1
@@ -88,14 +90,14 @@ call deoplete#custom#source('_', 'sorters', ['sorter_word'])
 
 " jedi
 let g:jedi#auto_initialization = 1
+let g:jedi#popup_select_first = 0
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = ""
 let g:jedi#usages_command = "<C-i>"
-let g:jedi#show_call_signatures = 2
-set noshowmode
+let g:jedi#show_call_signatures = 0
 
 " style stuffs
 syntax enable
@@ -104,6 +106,7 @@ colorscheme gruvbox
 set background=dark
 
 " setters
+set hidden
 set hlsearch
 set incsearch
 set smartcase
@@ -114,7 +117,6 @@ set splitright
 set noswapfile
 set laststatus=2
 set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L\ 
-set visualbell
 
 " cursor custom style
 let &t_SI = "\e[6 q"
@@ -122,9 +124,8 @@ let &t_EI = "\e[2 q"
 
 " custom colors
 hi Comment ctermfg=red
-hi Number ctermfg=red
-hi Normal ctermfg=white ctermbg=black
-hi String ctermfg=173
 hi Function ctermfg=red
+hi Normal ctermfg=white ctermbg=black
 hi Number ctermfg=red
+hi String ctermfg=173
 hi Visual ctermfg=white ctermbg=black
