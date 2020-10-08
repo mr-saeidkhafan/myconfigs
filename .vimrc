@@ -8,6 +8,15 @@ Plug 'junegunn/fzf'
 Plug 'alvan/vim-closetag'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
+Plug 'davidhalter/jedi-vim'
+Plug 'deoplete-plugins/deoplete-jedi'
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'roxma/nvim-yarp'
+	Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 call plug#end()
 
@@ -45,6 +54,19 @@ map <F7> gg=G<C-o><C-o>
 
 " changing the super key in insert mode
 imap jj <Esc>
+
+" auto complition
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#enable_typeinfo = 0
+
+" jedi
+let g:jedi#auto_initialization = 1
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = ""
+let g:jedi#show_call_signatures = "1"
 
 " style stuffs
 syntax enable

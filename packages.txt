@@ -48,6 +48,7 @@ cdparanoia
 chromium
 cifs-utils
 clucene
+cmake
 cmatrix
 code
 colord
@@ -170,6 +171,7 @@ jre-openjdk-headless
 js78
 json-c
 json-glib
+jsoncpp
 kaccounts-integration
 kactivities
 karchive
@@ -528,6 +530,7 @@ python-contextlib2
 python-distlib
 python-distro
 python-gobject
+python-greenlet
 python-html5lib
 python-idna
 python-msgpack
@@ -574,6 +577,7 @@ readline
 redland
 redshift
 rest
+rhash
 ripgrep
 rubberband
 run-parts
