@@ -13,7 +13,6 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'Shougo/echodoc.vim'
 
 call plug#end()
 
@@ -52,13 +51,9 @@ map <F7> gg=G<C-o><C-o>
 " changing the super key in insert mode
 imap jj <Esc>
 
-" echo doc
-let g:echodoc#enable_at_startup = 1
-
 " auto complition
-set noshowmode
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#enable_typeinfo = 1
+let g:deoplete#sources#jedi#enable_typeinfo = 0
 let g:deoplete#disable_auto_complete = 1
 set completeopt-=preview
 " use <tab> / <s-tab> to cycle through completions
