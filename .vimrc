@@ -16,8 +16,6 @@ Plug 'roxma/vim-hug-neovim-rpc'
 
 call plug#end()
 
-" undotree
-nnoremap <F5> :UndotreeToggle<cr>
 
 au BufReadPost * call ReadUndo()
 au BufWritePost * call WriteUndo()
@@ -42,7 +40,12 @@ let g:netrw_liststyle = 3
 let g:fzf_preview_window = 'right:60%'
 nnoremap <C-p> :FZF --preview=head\ -50\ {}<Cr>
 
-" shortcut for opening my file manager
+" SHORTCUTS
+" undotree
+nnoremap <F5> :UndotreeToggle<cr>
+" run python
+map <F8> :term python %<CR>
+" for opening my file manager
 map <F9> :call system('thunar')<CR>
 
 " formatting
