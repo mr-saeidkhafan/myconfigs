@@ -51,7 +51,10 @@ alias jn="jupyter-notebook"
 alias showip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias vpnc="cd /home/core/mydir/confs/vpn/ && ./start.sh && cd -"
 alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh && cd -"
-
+# tensorflow shutup
+alias tfs="echo 'import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf'"
 # path and python path
 export PYTHONPATH="/home/core/.local/bin/python3.8"
 export PATH=$PATH:/home/core/.local/bin

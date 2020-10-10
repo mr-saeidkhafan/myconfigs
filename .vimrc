@@ -121,9 +121,14 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 " custom colors
-hi Comment ctermfg=red
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
 hi Function ctermfg=red
 hi Normal ctermfg=white ctermbg=black
 hi Number ctermfg=red
 hi String ctermfg=173
 hi Visual ctermfg=white ctermbg=black
+hi StatusLine ctermfg=white ctermbg=black
+hi NonText ctermfg=white
+set visualbell
