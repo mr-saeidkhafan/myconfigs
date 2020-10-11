@@ -16,7 +16,6 @@ Plug 'roxma/vim-hug-neovim-rpc'
 
 call plug#end()
 
-
 au BufReadPost * call ReadUndo()
 au BufWritePost * call WriteUndo()
 func ReadUndo()
@@ -126,9 +125,10 @@ let &t_ZR="\e[23m"
 highlight Comment cterm=italic
 hi Function ctermfg=red
 hi Normal ctermfg=white ctermbg=black
-hi Number ctermfg=red
+hi Number ctermfg=white
 hi String ctermfg=173
 hi Visual ctermfg=white ctermbg=black
-hi StatusLine ctermfg=white ctermbg=black
-hi NonText ctermfg=white
-set visualbell
+hi StatusLine ctermfg=white ctermbg=black cterm=bold,reverse
+hi NonText ctermfg=darkgray
+hi Pmenu ctermfg=lightgray ctermbg=black
+hi PmenuSel ctermfg=black ctermbg=white cterm=bold,reverse
