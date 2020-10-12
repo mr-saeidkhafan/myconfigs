@@ -122,14 +122,18 @@ let &t_EI = "\e[2 q"
 " custom colors
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-highlight Comment cterm=italic
+highlight Comment ctermfg=red cterm=italic
 hi Function ctermfg=red
 hi Normal ctermfg=white ctermbg=black
-hi Number ctermfg=white
-hi Float ctermfg=white
+hi Number ctermfg=red
+hi Float ctermfg=red
 hi String ctermfg=173
 hi Visual ctermfg=white ctermbg=black
 hi StatusLine ctermfg=white ctermbg=black cterm=bold,reverse
-hi NonText ctermfg=darkgray
+hi NonText ctermfg=gray
+hi Conditional ctermfg=red
+hi PreProc ctermfg=red
+hi pythonBoolean ctermfg=red
+
 hi Pmenu ctermfg=lightgray ctermbg=black
 hi PmenuSel ctermfg=black ctermbg=white cterm=bold,reverse
