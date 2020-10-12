@@ -126,6 +126,7 @@ highlight Comment cterm=italic
 hi Function ctermfg=red
 hi Normal ctermfg=white ctermbg=black
 hi Number ctermfg=white
+hi Float ctermfg=white
 hi String ctermfg=173
 hi Visual ctermfg=white ctermbg=black
 hi StatusLine ctermfg=white ctermbg=black cterm=bold,reverse

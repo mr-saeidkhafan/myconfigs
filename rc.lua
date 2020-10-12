@@ -258,6 +258,9 @@ globalkeys = my_table.join(
     awful.key({ altkey, "Control" }, "0", function() awful.util.spawn("shutdown now") end,
               {description = "shutdown the machine", group = "hotkeys"}),
 
+    awful.key({ altkey, "Control" }, "3", function() awful.util.spawn("systemctl suspend") end,
+              {description = "suspend the machine", group = "hotkeys"}),
+
     awful.key({ altkey, "Control" }, "1", function() awful.util.spawn("shutdown -r now") end,
               {description = "reboot machine", group = "hotkeys"}),
 
