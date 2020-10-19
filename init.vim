@@ -98,6 +98,8 @@ map <F8> :w \| term python %<CR>
 map <F9> :call system('thunar')<CR>
 " delete buffer
 map <c-c><c-c> :bd!<CR>
+" delete buffer
+map <F6> :!pylint %<CR>
 
 " formatting
 autocmd FileType python noremap <buffer> <F7> :call Autopep8()<CR>
