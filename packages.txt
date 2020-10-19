@@ -53,15 +53,18 @@ cdparanoia
 chmlib
 chromium
 cifs-utils
+clang
 clucene
 cmake
 cmatrix
 code
 colord
+compiler-rt
 convertlit
 coreutils
 cowsay
 cryptsetup
+ctags
 curl
 dav1d
 db
@@ -104,6 +107,7 @@ fribidi
 fuse-common
 fuse2
 fuse3
+fuseiso
 garcon
 gawk
 gc
@@ -113,7 +117,6 @@ gcr
 gd
 gdbm
 gdk-pixbuf2
-geany
 geoclue
 geocode-glib
 gettext
@@ -577,6 +580,7 @@ python-pep517
 python-pip
 python-ply
 python-progress
+python-pynvim
 python-pyparsing
 python-pyqt5
 python-pyqt5-sip
@@ -700,8 +704,6 @@ v4l-utils
 vamp-plugin-sdk
 vi
 vid.stab
-vim
-vim-runtime
 virtualbox
 virtualbox-host-dkms
 vlc
@@ -732,7 +734,6 @@ xcb-util-wm
 xcb-util-xrm
 xdg-utils
 xf86-input-libinput
-xfce4-power-manager
 xfce4-screensaver
 xfce4-terminal
 xfconf

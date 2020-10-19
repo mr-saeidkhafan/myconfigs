@@ -4,13 +4,6 @@
 	- pacman packages
 	- python packages (pip)
 	- tmux config
-	- vimrc file
+	- init for neovim file
 	- custom patched dmenu
 	- tor tunnel all traffic network
-
-## Requirement
-	- awesome
-	- pip
-	- tmux
-	- vim
-	- tor
