@@ -14,6 +14,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
+Plug 'jupyter-vim/jupyter-vim'
 
 call plug#end()
 
@@ -29,6 +30,9 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 
 let g:closetag_emptyTags_caseSensitive = 1
+
+" jupyter vim
+let g:python3_host_prog = '/usr/bin/python3.8'
 
 
 filetype plugin on
