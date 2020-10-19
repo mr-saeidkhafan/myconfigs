@@ -4,6 +4,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 
+" formatter
+Plug 'tell-k/vim-autopep8'
+
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'sheerun/vim-polyglot'
@@ -16,6 +19,7 @@ call plug#end()
 
 " changing the super key in insert mode
 imap jj <Esc>
+
 
 " auto close tag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.py,*.js'
@@ -92,9 +96,14 @@ nnoremap <F5> :UndotreeToggle<cr>
 map <F8> :w \| term python %<CR>
 " for opening my file manager
 map <F9> :call system('thunar')<CR>
+" delete buffer
+map <c-c><c-c> :bd!<CR>
 
 " formatting
-map <F7> gg=G<C-o><C-o>
+autocmd FileType python noremap <buffer> <F7> :call Autopep8()<CR>
+let g:autopep8_aggressive=2
+let g:autopep8_disable_show_diff=1
+let g:autopep8_on_save = 1
 
 " style stuffs
 syntax enable
