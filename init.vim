@@ -1,17 +1,10 @@
 call plug#begin()
-" auto complete and document
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'davidhalter/jedi-vim'
-
 " formatter
 Plug 'tell-k/vim-autopep8'
-
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
 Plug 'jupyter-vim/jupyter-vim'
@@ -33,41 +26,6 @@ let g:closetag_emptyTags_caseSensitive = 1
 
 " jupyter vim
 let g:python3_host_prog = '/usr/bin/python3.8'
-
-
-filetype plugin on
-
-" auto complition
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#enable_typeinfo = 0
-let g:deoplete#disable_auto_complete = 1
-let g:jedi#popup_select_first = 0
-let g:jedi#smart_auto_mappings = 0
-set completeopt=menu,noinsert
-
-call deoplete#custom#option({'auto_complete_delay' : 0, 'auto_refresh_delay': 0, 'ignore_case': 1, })
-
-" use <tab> / <s-tab> to cycle through completions
-function! s:check_back_space() abort "{{{
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ deoplete#manual_complete()
-
-inoremap <silent><expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-
-" don't insert a newline when selecting with <Enter>
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>" : "\<CR>")
-
-" jedi
-let g:jedi#auto_initialization = 1
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#show_call_signatures = 0
 
 " create undo files
 au BufReadPost * call ReadUndo()
@@ -109,7 +67,6 @@ map <F6> :!pylint %<CR>
 autocmd FileType python noremap <buffer> <F7> :call Autopep8()<CR>
 let g:autopep8_aggressive=2
 let g:autopep8_disable_show_diff=1
-let g:autopep8_on_save = 1
 
 " style stuffs
 syntax enable
@@ -134,6 +91,7 @@ set scrolloff=7
 set backspace=indent,eol,start
 set fileformat=unix
 set autoindent
+set completeopt=menu,noinsert
 
 " custom colors
 let &t_ZH="\e[3m"
