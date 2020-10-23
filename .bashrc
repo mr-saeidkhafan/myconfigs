@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+export TERM=xterm-256color
+
 # vi mode for bash
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'
@@ -23,6 +25,7 @@ PS1="🔺\t \u@\h (\W)\$(parse_git_branch)$ "
 
 # coloring stuffs
 alias ls="ls --color=auto"
+alias jn="jupyter notebook"
 alias grep="grep --color=auto"
 alias dir="dir --color=auto"
 alias ip="ip -color=auto"
@@ -47,7 +50,7 @@ alias ll="ls -alhtrF --time-style=long-iso"
 alias dl="cd /tmp/daily"
 alias tk="tmux kill-session -t"
 alias tka="tmux kill-session -a"
-alias jn="jupyter-notebook"
+alias jc="jupyter-qtconsole"
 alias showip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias vpnc="cd /home/core/mydir/confs/vpn/ && ./start.sh && cd -"
 alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh && cd -"
