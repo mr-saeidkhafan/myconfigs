@@ -24,6 +24,8 @@ fi
 PS1="🔺\t \u@\h (\W)\$(parse_git_branch)$ "
 
 # coloring stuffs
+alias vim="/usr/local/bin/vim"
+alias emu="emulator -avd Pixel_3a_API_30_x86"
 alias ls="ls --color=auto"
 alias jn="jupyter notebook"
 alias grep="grep --color=auto"
@@ -59,9 +61,17 @@ alias tfs="echo 'import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import tensorflow as tf'"
 # path and python path
-export PYTHONPATH="/home/core/.local/bin/python3.8"
 export PATH=$PATH:/home/core/.local/bin
 export PATH=$PATH:/usr/lib/jvm/default/bin
+export PYTHONPATH="/bin/python3.8"
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
+export ANDROID_HOME="/home/core/.buildozer/android/platform/android-sdk"
+export ANDROID_SDK="/home/core/.buildozer/android/platform/android-sdk"
+export ANDROIDNDK="/home/core/.buildozer/android/platform/android-ndk-r19c"
+export ANDROIDAPI="27"  # Target API version of your application
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # bash completion
 complete -cf sudo

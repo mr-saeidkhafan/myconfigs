@@ -26,7 +26,7 @@ endfunc
 " run python
 map <F8> :w \| term python %<CR>
 " for opening my file manager
-map <F9> :call system('thunar')<CR>
+map <F9> :!thunar $(dirname %) &<CR>
 " delete buffer
 map <c-c><c-c> :bd!<CR>
 " pylint
