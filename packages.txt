@@ -17,9 +17,6 @@ android-file-transfer
 android-tools
 android-udev
 aom
-apparmor
-appstream-glib
-archlinux-appstream-data
 archlinux-keyring
 argon2
 aribb24
@@ -119,7 +116,6 @@ filesystem
 findutils
 firefox
 flac
-flatpak
 flex
 fontconfig
 freetype2
@@ -131,7 +127,6 @@ fuseiso
 garcon
 gawk
 gc
-gcab
 gcc
 gcc-libs
 gcr
@@ -153,15 +148,12 @@ glibc
 glibmm
 glslang
 gmp
-gnome-desktop
-gnome-keyring
 gnome-menus
 gnome-sound-recorder
 gnome-themes-extra
 gnu-free-fonts
 gnupg
 gnutls
-gobject-introspection
 gobject-introspection-runtime
 gpgme
 gpm
@@ -557,14 +549,12 @@ opus
 orage
 orc
 osinfo-db
-ostree
 p11-kit
 p7zip
 pacman
 pacman-contrib
 pacman-mirrorlist
 pam
-pamac-all
 pambase
 pango
 pangomm
@@ -584,7 +574,6 @@ perl-timedate
 perl-uri
 phodav
 pinentry
-pipewire
 pixman
 pkcs11-helper
 pkgconf
@@ -600,7 +589,6 @@ pulseaudio
 pulseaudio-alsa
 python
 python-appdirs
-python-beaker
 python-cachecontrol
 python-cairo
 python-chardet
@@ -614,9 +602,6 @@ python-gpgme
 python-greenlet
 python-html5lib
 python-idna
-python-mako
-python-markdown
-python-markupsafe
 python-msgpack
 python-ordered-set
 python-packaging
@@ -672,7 +657,6 @@ rsync
 rtkit
 rubberband
 run-parts
-sbc
 scrcpy
 sdl
 sdl2
@@ -684,8 +668,6 @@ shared-mime-info
 slang
 sleuthkit
 smbclient
-snapd
-snapd-glib
 snappy
 sound-theme-freedesktop
 speedcrunch
@@ -792,8 +774,6 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 xdg-dbus-proxy
-xdg-desktop-portal
-xdg-desktop-portal-gtk
 xdg-utils
 xf86-input-libinput
 xfburn
