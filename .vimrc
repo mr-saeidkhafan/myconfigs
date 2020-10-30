@@ -23,14 +23,14 @@ func WriteUndo()
 endfunc
 
 " SHORTCUTS
+" pylint
+map <F6> :!pylint %<CR>
 " run python
 map <F8> :w \| term python %<CR>
 " for opening my file manager
 map <F9> :!thunar $(dirname %) &<CR>
 " delete buffer
 map <c-c><c-c> :bd!<CR>
-" pylint
-map <F6> :!pylint %<CR>
 
 " style stuffs
 syntax on
@@ -63,11 +63,15 @@ set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L
 set scrolloff=7
 set fileformat=unix
 set autoindent
+set guifont=Hack
 
 " custom colors
-hi Visual ctermfg=white ctermbg=black
-hi Pmenu ctermfg=lightgray ctermbg=black
+hi Visual ctermfg=white guifg=black guibg=white ctermbg=black
+hi Pmenu ctermfg=lightgray guifg=lightgrey guibg=black  ctermbg=black
 hi PmenuSel ctermfg=black ctermbg=white cterm=bold,reverse
+hi StatusLine ctermfg=white guifg=white ctermbg=black guibg=black gui=bold,reverse
+hi Normal guibg=black
+hi NonText guibg=black
 
 " gui stuffs
 set guioptions -=m
