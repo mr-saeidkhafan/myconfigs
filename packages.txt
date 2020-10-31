@@ -773,6 +773,7 @@ xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
+xclip
 xdg-dbus-proxy
 xdg-utils
 xf86-input-libinput
