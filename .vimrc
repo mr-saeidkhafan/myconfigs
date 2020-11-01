@@ -37,10 +37,6 @@ syntax on
 colorscheme desert
 set background=dark
 
-" highlight extra whitespaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-
 " cursor custom style
 if &term =~? "xterm" || &term =~? "rxvt"
 	let &t_SI = "\<Esc>[6 q"
@@ -79,3 +75,4 @@ set guioptions -=T
 set guioptions +=a
 source $VIMRUNTIME/mswin.vim
 behave mswin
+set guitablabel=%N-\ %t\ %M
