@@ -31,6 +31,9 @@ map <F8> :w \| term python %<CR>
 map <F9> :!thunar $(dirname %) &<CR>
 " delete buffer
 map <c-c><c-c> :bd!<CR>
+" map copy past everywhere!
+vnoremap <C-S-c> "+y
+map <C-S-v> "+p
 
 " style stuffs
 syntax on
@@ -51,6 +54,10 @@ set smartcase
 set ignorecase
 set ts=4 sw=4
 set shiftwidth=4
+set smarttab
+set expandtab
+set autoindent
+set smartindent
 set splitbelow
 set splitright
 set noswapfile
@@ -58,8 +65,8 @@ set laststatus=2
 set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L
 set scrolloff=7
 set fileformat=unix
-set autoindent
 set guifont=Hack
+set backspace=indent,eol,start
 
 " custom colors
 hi Visual ctermfg=white guifg=black guibg=white ctermbg=black
@@ -68,11 +75,11 @@ hi PmenuSel ctermfg=black ctermbg=white cterm=bold,reverse
 hi StatusLine ctermfg=white guifg=white ctermbg=black guibg=black gui=bold,reverse
 hi Normal guibg=black
 hi NonText guibg=black
+hi Search guifg=black ctermfg=white guibg=white ctermbg=black gui=bold cterm=bold,reverse
+hi Cursor guibg=NONE guifg=NONE gui=reverse
 
 " gui stuffs
 set guioptions -=m
 set guioptions -=T
 set guioptions +=a
-source $VIMRUNTIME/mswin.vim
-behave mswin
-set guitablabel=%N-\ %t\ %M
+set guitablabel=%N-\%t\ %M
