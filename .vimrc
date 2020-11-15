@@ -1,6 +1,10 @@
 call plug#begin('~/.vim/plugged')
 Plug 'mbbill/undotree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
+Plug 'bling/vim-bufferline'
 call plug#end()
+
 " changing the super key in insert mode
 imap jj <Esc>
 
@@ -22,21 +26,30 @@ func WriteUndo()
 	wundo /tmp/daily/UNDO/%:t
 endfunc
 
+" fzf
+let g:fzf_preview_window = 'right:60%'
+nnoremap <C-p> :FZF --preview=head\ -50\ {}<Cr>
+
 " SHORTCUTS
 " pylint
 map <F6> :!pylint %<CR>
+
 " run python
 map <F8> :w \| term python %<CR>
+
 " for opening my file manager
 map <F9> :!thunar $(dirname %) &<CR>
-" delete buffer
-map <c-c><c-c> :bd!<CR>
+
 " map copy past everywhere!
 vnoremap <C-S-c> "+y
 map <C-S-v> "+p
 
+" next and previous buffers
+map <C-PageUp> :bp<CR>
+map <C-PageDown> :bn<CR>
+
 " style stuffs
-syntax on
+syntax enable
 colorscheme desert
 set background=dark
 
@@ -47,7 +60,12 @@ if &term =~? "xterm" || &term =~? "rxvt"
 	autocmd VimLeave * let &t_me = "\<Esc>[1 q"
 endif
 
+" delete buffer
+map <c-c><c-c> :bd!<CR>
+
 " setters
+set hidden
+set mouse=a
 set hlsearch
 set incsearch
 set smartcase
@@ -82,4 +100,3 @@ hi Cursor guibg=NONE guifg=NONE gui=reverse
 set guioptions -=m
 set guioptions -=T
 set guioptions +=a
-set guitablabel=%N-\%t\ %M

@@ -24,7 +24,6 @@ fi
 PS1="🔺\t \u@\h (\W)\$(parse_git_branch)$ "
 
 # coloring stuffs
-alias vim="/usr/local/bin/vim"
 alias emu="emulator -avd Pixel_3a_API_30_x86"
 alias ls="ls --color=auto"
 alias jn="jupyter notebook"
