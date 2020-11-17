@@ -17,6 +17,8 @@ android-file-transfer
 android-tools
 android-udev
 aom
+apr
+apr-util
 archlinux-keyring
 argon2
 aribb24
@@ -29,7 +31,6 @@ audit
 autoconf
 automake
 avahi
-bamf
 base
 bash
 bind
@@ -66,6 +67,7 @@ coreutils
 cowsay
 cryptsetup
 ctags
+cuda-9.1
 curl
 dav1d
 db
@@ -117,6 +119,8 @@ gawk
 gc
 gcc
 gcc-libs
+gcc6
+gcc6-libs
 gcr
 gd
 gdbm
@@ -136,7 +140,6 @@ glibc
 glibmm
 glslang
 gmp
-gnome-menus
 gnome-sound-recorder
 gnome-themes-extra
 gnu-free-fonts
@@ -272,7 +275,6 @@ libffi
 libfontenc
 libfreehand
 libgcrypt
-libgee
 libglvnd
 libgpg-error
 libgphoto2
@@ -382,6 +384,7 @@ libupnp
 libusb
 libusbmuxd
 libutempter
+libutf8proc
 libuv
 libva
 libvdpau
@@ -449,8 +452,8 @@ llvm-libs
 lm_sensors
 lmdb
 lpsolve
-lua
 lua52
+lua53
 luit
 lvm2
 lz4
@@ -499,6 +502,7 @@ nvidia-390xx-utils
 nvidia-settings
 obs-studio
 openal
+opencl-nvidia
 opencore-amr
 opencv
 openexr
@@ -535,7 +539,6 @@ pinentry
 pixman
 pkcs11-helper
 pkgconf
-plank
 polkit
 polkit-gnome
 poppler
@@ -613,6 +616,7 @@ scrcpy
 sdl
 sdl2
 sed
+serf
 shaderc
 shadow
 shared-mime-info
@@ -629,6 +633,7 @@ srt
 stardict
 stardict-tools-git
 startup-notification
+subversion
 sudo
 sysfsutils
 systemd
