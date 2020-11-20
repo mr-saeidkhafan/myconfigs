@@ -2,8 +2,6 @@
 # ~/.bashrc
 #
 
-export TERM=xterm-256color
-
 # vi mode for bash
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'
@@ -24,7 +22,6 @@ fi
 PS1="🔺\t \u@\h (\W)\$(parse_git_branch)$ "
 
 # coloring stuffs
-alias emu="emulator -avd Pixel_3a_API_30_x86"
 alias ls="ls --color=auto"
 alias jn="jupyter notebook"
 alias grep="grep --color=auto"
