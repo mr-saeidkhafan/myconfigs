@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf'
 Plug 'bling/vim-bufferline'
 call plug#end()
 
@@ -41,8 +40,7 @@ map <F8> :w \| term python %<CR>
 map <F9> :!thunar $(dirname %) &<CR>
 
 " map copy past everywhere!
-vnoremap <C-S-c> "+y
-map <C-S-v> "+p
+vnoremap <C-c> "+y
 
 " next and previous buffers
 map <C-PageUp> :bp<CR>
