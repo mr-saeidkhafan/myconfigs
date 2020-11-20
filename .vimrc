@@ -7,7 +7,6 @@ call plug#end()
 
 " colorize automatic
 let g:colorizer_auto_filetype='css,html,kivy,python,js'
-let g:colorizer_skip_comments = 1
 
 " changing the super key in insert mode
 imap jj <Esc>
