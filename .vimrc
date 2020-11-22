@@ -6,7 +6,7 @@ Plug 'chrisbra/Colorizer'
 call plug#end()
 
 " colorize automatic
-let g:colorizer_auto_filetype='css,html,kivy,python,js'
+let g:colorizer_auto_filetype='css,html,kivy,python,js,text'
 
 " changing the super key in insert mode
 imap jj <Esc>
@@ -51,8 +51,8 @@ map <C-PageUp> :bp<CR>
 map <C-PageDown> :bn<CR>
 
 " style stuffs
-syntax enable
-colorscheme desert
+syntax on
+colorscheme default
 set background=dark
 
 " cursor custom style
@@ -97,8 +97,15 @@ hi Normal guibg=black
 hi NonText guibg=black
 hi Search guifg=black ctermfg=white guibg=white ctermbg=black gui=bold cterm=bold,reverse
 hi Cursor guibg=NONE guifg=NONE gui=reverse
+hi Comment ctermfg=44
 
 " gui stuffs
 set guioptions -=m
 set guioptions -=T
 set guioptions +=a
+
+set noshowmode
+set noruler
+set laststatus=0
+set noshowcmd
+set cmdheight=1
