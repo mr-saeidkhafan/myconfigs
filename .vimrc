@@ -50,11 +50,6 @@ vnoremap <C-c> "+y
 map <C-PageUp> :bp<CR>
 map <C-PageDown> :bn<CR>
 
-" style stuffs
-syntax on
-colorscheme default
-set background=dark
-
 " cursor custom style
 if &term =~? "xterm" || &term =~? "rxvt"
 	let &t_SI = "\<Esc>[6 q"
@@ -89,15 +84,13 @@ set guifont=Hack
 set backspace=indent,eol,start
 
 " custom colors
-hi Visual ctermfg=white guifg=black guibg=white ctermbg=black
+hi Visual ctermfg=black guifg=black guibg=white ctermbg=white
 hi Pmenu ctermfg=lightgray guifg=lightgrey guibg=black  ctermbg=black
 hi PmenuSel ctermfg=black ctermbg=white cterm=bold,reverse
-hi StatusLine ctermfg=white guifg=white ctermbg=black guibg=black gui=bold,reverse
 hi Normal guibg=black
 hi NonText guibg=black
 hi Search guifg=black ctermfg=white guibg=white ctermbg=black gui=bold cterm=bold,reverse
 hi Cursor guibg=NONE guifg=NONE gui=reverse
-hi Comment ctermfg=44
 
 " gui stuffs
 set guioptions -=m
@@ -109,3 +102,6 @@ set noruler
 set laststatus=0
 set noshowcmd
 set cmdheight=1
+
+set background=dark
+set termguicolors
