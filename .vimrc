@@ -85,15 +85,14 @@ set backspace=indent,eol,start
 
 " custom colors
 set background=dark
-colorscheme desert
 set termguicolors
 
 hi Visual ctermfg=black guifg=black guibg=white ctermbg=white
 hi Pmenu ctermfg=lightgray guifg=lightgrey guibg=black  ctermbg=black
-hi PmenuSel ctermfg=black ctermbg=white cterm=bold,reverse
-hi Normal guibg=black
+hi PmenuSel guifg=white guibg=black cterm=bold,reverse
+hi Normal guibg=black ctermfg=white guifg=white
 hi NonText guibg=black
-hi Search guifg=black ctermfg=white guibg=white ctermbg=black gui=bold cterm=bold,reverse
+hi Search guifg=white ctermfg=white guibg=black ctermbg=black gui=bold cterm=bold,reverse
 hi Cursor guibg=NONE guifg=NONE gui=reverse
 
 " gui stuffs

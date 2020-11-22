@@ -19,7 +19,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
-PS1="\u@\h (\W)\$(parse_git_branch)$ "
+PS1="\e[0;36m\u@\h\e[m (\W)\$(parse_git_branch)$ "
 
 # coloring stuffs
 alias ls="ls --color=auto"
@@ -71,6 +71,3 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # bash completion
 complete -cf sudo
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
