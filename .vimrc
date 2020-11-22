@@ -84,6 +84,10 @@ set guifont=Hack
 set backspace=indent,eol,start
 
 " custom colors
+set background=dark
+colorscheme desert
+set termguicolors
+
 hi Visual ctermfg=black guifg=black guibg=white ctermbg=white
 hi Pmenu ctermfg=lightgray guifg=lightgrey guibg=black  ctermbg=black
 hi PmenuSel ctermfg=black ctermbg=white cterm=bold,reverse
@@ -103,5 +107,3 @@ set laststatus=0
 set noshowcmd
 set cmdheight=1
 
-set background=dark
-set termguicolors
