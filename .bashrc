@@ -43,7 +43,7 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # custom alias
 alias py=python
 alias rm="rm -i"
-alias pj="cd ~/mydir/projects/"
+alias pj="cd /home/core/mydir/projects/"
 alias ll="ls -alhtrF --time-style=long-iso"
 alias dl="cd /tmp/daily"
 alias tk="tmux kill-session -t"
