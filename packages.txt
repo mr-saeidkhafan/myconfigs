@@ -39,6 +39,7 @@ bison
 blas
 bluez-libs
 boost-libs
+botan
 brotli
 btrfs-progs
 bubblewrap
@@ -187,6 +188,7 @@ hyphen
 iana-etc
 icu
 imlib2
+inetutils
 iproute2
 iptables
 iputils
@@ -445,7 +447,6 @@ lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 linux-api-headers
 linux-firmware
-linux-headers
 linux-lts
 linux-lts-headers
 llvm-libs
@@ -550,10 +551,13 @@ pulseaudio
 pulseaudio-alsa
 python
 python-appdirs
+python-asn1crypto
 python-cachecontrol
+python-cffi
 python-chardet
 python-colorama
 python-contextlib2
+python-cryptography
 python-distlib
 python-distro
 python-docs
@@ -569,6 +573,8 @@ python-pep517
 python-pip
 python-ply
 python-progress
+python-pycparser
+python-pyopenssl
 python-pyparsing
 python-pyqt5
 python-pyqt5-sip
@@ -629,6 +635,7 @@ speex
 speexdsp
 spirv-tools
 sqlite
+sqlitebrowser
 srt
 stardict
 stardict-tools-git

@@ -19,7 +19,19 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
-PS1="\e[0;36m\u@\h\e[m (\W)\$(parse_git_branch)$ "
+# colors
+CYAN=$(tput setaf 6)
+NORMAL=$(tput sgr0)
+GREEN=$(tput setaf 2)
+RED=$(tput setaf 1)
+LIME_YELLOW=$(tput setaf 4)
+POWDER_BLUE=$(tput setaf 153)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
+#PS1="\e[0;36m\u@\h\e[m (\W)\$(parse_git_branch)$ "
+PS1='[\[${CYAN}\]\u\[${RED}\]@\[${NORMAL}\]\[${POWDER_BLUE}\]\h \[${NORMAL}\]\W]$(parse_git_branch)↯ '
 
 # coloring stuffs
 alias ls="ls --color=auto"
@@ -52,10 +64,7 @@ alias jc="jupyter-qtconsole"
 alias showip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias vpnc="cd /home/core/mydir/confs/vpn/ && ./start.sh && cd -"
 alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh && cd -"
-# tensorflow shutup
-alias tfs="echo 'import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-import tensorflow as tf'"
+
 # path and python path
 export PATH=$PATH:/home/core/.local/bin
 export PATH=$PATH:/usr/lib/jvm/default/bin
