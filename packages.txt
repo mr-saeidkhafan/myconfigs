@@ -34,7 +34,6 @@ avahi
 babl
 base
 bash
-bind
 binutils
 bison
 blas
@@ -317,7 +316,6 @@ liblangtag
 libldap
 libmad
 libmatroska
-libmaxminddb
 libmfx
 libmicrohttpd
 libmm-glib
