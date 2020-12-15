@@ -2,11 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'bling/vim-bufferline'
-Plug 'chrisbra/Colorizer'
 call plug#end()
-
-" colorize automatic
-let g:colorizer_auto_filetype='css,html,kivy,python,js,text'
 
 " changing the super key in insert mode
 imap jj <Esc>
@@ -100,9 +96,5 @@ set guioptions -=m
 set guioptions -=T
 set guioptions +=a
 
-set noshowmode
-set noruler
 set laststatus=0
-set noshowcmd
-set cmdheight=1
 

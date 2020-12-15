@@ -17,7 +17,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.zenburn_dir                               = require("awful.util").get_themes_dir() .. "zenburn"
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/steamburn"
-theme.wallpaper                                 = gears.wallpaper.set("#222222")
+theme.wallpaper                                 = theme.dir .. "/future.jpg" --gears.wallpaper.set("#222222")
 theme.font                                      = "Ubuntu Mono derivative Powerline Regular 12"
 theme.fg_normal                                 = "#ffffff"
 theme.fg_focus                                  = "#666666"
@@ -78,21 +78,6 @@ local mem = lain.widget.mem({
 })
 
 
--- ALSA volume
-theme.volume = lain.widget.alsa({
-    settings = function()
-        header = "vol "
-        vlevel  = volume_now.level .. "%"
-
-        if volume_now.status == "off" then
-            vlevel = vlevel .. "M "
-        else
-            vlevel = vlevel .. " "
-        end
-
-        widget:set_markup(markup.font(theme.font, markup(gray, header) .. vlevel))
-    end
-})
 
 -- Separators
 local first = wibox.widget.textbox(markup.font("Terminus 4", " "))
@@ -158,7 +143,6 @@ function theme.at_screen_connect(s)
             --theme.mail.widget,
             cpu.widget,
             mem.widget,
-            theme.volume.widget,
             s.mytxtlayoutbox,
             mytextclock
         },

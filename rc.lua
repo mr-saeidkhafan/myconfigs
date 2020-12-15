@@ -66,7 +66,7 @@ local themes = {
 local chosen_theme = themes[9]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "urxvtc"
+local terminal     = "xfce4-terminal"
 local vi_focus     = false -- vi-like client focus - https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "vim"
@@ -113,9 +113,7 @@ awful.util.taglist_buttons = my_table.join(
         if client.focus then
             client.focus:toggle_tag(t)
         end
-    end),
-    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
-    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
+    end)
 )
 
 awful.util.tasklist_buttons = my_table.join(
@@ -137,7 +135,6 @@ awful.util.tasklist_buttons = my_table.join(
             c:raise()
         end
     end),
-    awful.button({ }, 2, function (c) c:kill() end),
     awful.button({ }, 3, function ()
         local instance = nil
 
@@ -187,10 +184,8 @@ awful.util.mymainmenu = freedesktop.menu.build({
     }
 })
 -- hide menu when mouse leaves it
---awful.util.mymainmenu.wibox:connect_signal("mouse::leave", function() awful.util.mymainmenu:hide() end)
-
---menubar.utils.terminal = terminal -- Set the Menubar terminal for applications that require it
--- }}}
+-- awful.util.mymainmenu.wibox:connect_signal("mouse::leave", function() awful.util.mymainmenu:hide() end)
+-- menubar.utils.terminal = terminal -- Set the Menubar terminal for applications that require it
 
 -- {{{ Screen
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -219,14 +214,6 @@ screen.connect_signal("arrange", function (s)
 end)
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) end)
--- }}}
-
--- {{{ Mouse bindings
-root.buttons(my_table.join(
-    awful.button({ }, 3, function () awful.util.mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
 -- }}}
 
 -- {{{ Key bindings
@@ -495,3 +482,13 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
+-- auto start
+awful.util.spawn_with_shell("nm-applet")
+awful.util.spawn_with_shell("redshift-gtk -l 35.72:51.41 -t 5600:3000")
+awful.util.spawn_with_shell("xset -b")
+awful.util.spawn_with_shell("xfce4-power-manager")
+awful.util.spawn_with_shell("xfce4-screensaver")
+awful.util.spawn_with_shell("mkdir /tmp/daily")
+awful.util.spawn_with_shell("pasystray")
+awful.util.spawn_with_shell("nvidia-settings --assign CurrentMetaMode='nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }'")
+

@@ -545,6 +545,7 @@ pango
 pangomm
 papirus-icon-theme
 parted
+pasystray
 patch
 pavucontrol
 pciutils
