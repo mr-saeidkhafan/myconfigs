@@ -116,6 +116,33 @@ function theme.at_screen_connect(s)
     screen = s,
     filter = awful.widget.tasklist.filter.currenttags,
     buttons = awful.util.tasklist_buttons, 
+    layout = {
+        layout  = wibox.layout.flex.horizontal
+    },
+    widget_template = {
+        {
+            {
+                {
+                    {
+                        id     = 'icon_role',
+                        widget = wibox.widget.imagebox,
+                    },
+                    margins = 2,
+                    widget  = wibox.container.margin,
+                },
+                {
+                    id     = 'text_role',
+                    widget = wibox.widget.textbox,
+                },
+                layout = wibox.layout.fixed.horizontal,
+            },
+            left  = 1,
+            right = 1,
+            widget = wibox.container.margin
+        },
+        id     = 'background_role',
+        widget = wibox.container.background,
+      },
     }
 
     -- Create the wibox
