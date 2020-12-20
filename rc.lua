@@ -478,11 +478,11 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- auto start
-awful.util.spawn_with_shell("nvidia-settings --assign CurrentMetaMode='nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }'")
+awful.util.spawn_with_shell("picom --experimental-backends &")
 awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("redshift-gtk -l 35.72:51.41 -t 5600:3000")
 awful.util.spawn_with_shell("xset -b")
 awful.util.spawn_with_shell("xfce4-power-manager")
 awful.util.spawn_with_shell("xfce4-screensaver")
 awful.util.spawn_with_shell("mkdir /tmp/daily")
-awful.util.spawn_with_shell("pasystray")
+awful.util.spawn_with_shell("volumeicon")

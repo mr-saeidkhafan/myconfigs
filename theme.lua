@@ -77,6 +77,22 @@ local mem = lain.widget.mem({
     end
 })
 
+-- ALSA volume
+theme.volume = lain.widget.alsa({
+    settings = function()
+        header = "vol "
+        vlevel  = volume_now.level
+
+        if volume_now.status == "off" then
+            vlevel = vlevel .. "M "
+        else
+            vlevel = vlevel .. " "
+        end
+
+        widget:set_markup(markup.font(theme.font, markup(gray, header) .. vlevel))
+    end
+})
+
 -- Separators
 local first = wibox.widget.textbox(markup.font("Terminus 4", " "))
 local spr   = wibox.widget.textbox(' ')
@@ -146,7 +162,7 @@ function theme.at_screen_connect(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(16) })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(17) })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -169,6 +185,7 @@ function theme.at_screen_connect(s)
             --theme.mail.widget,
             cpu.widget,
             mem.widget,
+            theme.volume,
             s.mytxtlayoutbox,
             mytextclock
         },

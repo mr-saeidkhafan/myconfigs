@@ -1,0 +1,40 @@
+# Learn Linux 101: Streams, pipes, and redirects
+Input redirection with a here-document
+
+# grap disk image
+sudo dd if=/dev/sr0 of=/home/core/english.iso status=progress conv=sync,noerror bs=1M
+
+# mount iso image
+mkdir /mnt/iso
+sudo mount -o loop /path/of/diskimage.iso /mnt/iso/
+
+# unset opts
+unset JAVA_OPTS
+
+# build with python for android
+p4a apk --private $HOME/mydir/projects/kivy/main.py --package=org.example.myapp --name "My application" --version 0.1 --bootstrap=sdl2 --requirements=python3,kivy
+
+# key import error
+gpg --keyserver keyserver.ubuntu.com --recv-keys 4773BD5E130D1D45
+
+# screen tearing
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+
+# nvidia /etc/X11/xorg.conf.d/20-nvidia.conf
+Section "Device"
+		Option "RegistryDwords" "EnableBrightnessControl=1"
+        Identifier "Nvidia Card"
+        Driver "nvidia"
+        VendorName "NVIDIA Corporation GF119M"
+        BoardName "GeForce 410M"
+EndSection
+
+Section "Screen"
+    Identifier     "Screen0"
+    Device         "Device0"
+    Monitor        "Monitor0"
+    Option         "metamodes" "nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+    Option         "AllowIndirectGLXProtocol" "off"
+    Option         "TripleBuffer" "on"
+EndSection
+
