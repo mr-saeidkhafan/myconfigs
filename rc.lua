@@ -350,7 +350,34 @@ clientkeys = my_table.join(
             c.maximized = not c.maximized
             c:raise()
         end ,
-        {description = "maximize", group = "client"})
+        {description = "maximize", group = "client"}),
+
+    -- snapping with keyboard
+    awful.key({ modkey }, "y",
+    function(c)
+        awful.placement.centered(c.focus)
+    end),
+    awful.key({ modkey }, "Up",
+    function(c)
+        local f = awful.placement.scale + awful.placement.top + awful.placement.maximize_horizontally
+        f(c.focus, {honor_workarea=true, to_percent = 0.5})
+    end),
+    awful.key({ modkey }, "Down",
+    function(c)
+        local f = awful.placement.scale + awful.placement.bottom + awful.placement.maximize_horizontally
+        f(c.focus, {honor_workarea=true, to_percent = 0.5})
+    end),
+
+    awful.key({ modkey }, "Left",
+    function(c)
+        local f = awful.placement.scale + awful.placement.left + awful.placement.maximize_vertically
+        f(c.focus, {honor_workarea=true, to_percent = 0.5})
+    end),
+    awful.key({ modkey }, "Right",
+    function(c)
+        local f = awful.placement.scale + awful.placement.right + awful.placement.maximize_vertically
+        f(c.focus, {honor_workarea=true, to_percent = 0.5})
+    end)
 )
 
 -- Bind all key numbers to tags.
@@ -478,11 +505,10 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- auto start
-awful.util.spawn_with_shell("picom --experimental-backends &")
-awful.util.spawn_with_shell("nm-applet")
-awful.util.spawn_with_shell("redshift-gtk -l 35.72:51.41 -t 5600:3000")
-awful.util.spawn_with_shell("xset -b")
-awful.util.spawn_with_shell("xfce4-power-manager")
-awful.util.spawn_with_shell("xfce4-screensaver")
-awful.util.spawn_with_shell("mkdir /tmp/daily")
-awful.util.spawn_with_shell("volumeicon")
+-- awful.util.spawn_with_shell("nm-applet")
+-- awful.util.spawn_with_shell("redshift-gtk -l 35.72:51.41 -t 5600:3000")
+-- awful.util.spawn_with_shell("xset -b")
+-- awful.util.spawn_with_shell("xfce4-power-manager")
+-- awful.util.spawn_with_shell("xfce4-screensaver")
+-- awful.util.spawn_with_shell("mkdir /tmp/daily")
+-- awful.util.spawn_with_shell("volumeicon")
