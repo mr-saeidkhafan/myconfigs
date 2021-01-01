@@ -14,7 +14,6 @@ alsa-ucm-conf
 alsa-utils
 amtk
 android-file-transfer
-android-tools
 android-udev
 aom
 apr
@@ -37,6 +36,7 @@ bash
 binutils
 bison
 blas
+bleachbit
 bluez-libs
 boost-libs
 botan
@@ -130,7 +130,6 @@ gdk-pixbuf2
 geckodriver
 gedit
 gegl
-genymotion
 geoclue
 geocode-glib
 gettext
@@ -207,11 +206,8 @@ java-runtime-common
 jbig2dec
 jcal-git
 jdk-openjdk
-jdk8-openjdk
 jre-openjdk
 jre-openjdk-headless
-jre8-openjdk
-jre8-openjdk-headless
 js78
 json-c
 json-glib
@@ -550,7 +546,6 @@ perl-error
 perl-file-which
 perl-mailtools
 perl-timedate
-perl-uri
 picom-tryone-git
 pinentry
 pixman
@@ -564,7 +559,6 @@ poppler-glib
 popt
 potrace
 procps-ng
-protobuf
 psmisc
 pulseaudio
 pulseaudio-alsa
@@ -607,12 +601,10 @@ python-toml
 python-urllib3
 python-webencodings
 qbittorrent
-qca
 qt5-base
 qt5-declarative
 qt5-imageformats
 qt5-location
-qt5-script
 qt5-sensors
 qt5-styleplugins
 qt5-svg
@@ -636,7 +628,6 @@ ripgrep
 rtkit
 rubberband
 run-parts
-scrcpy
 sdl
 sdl2
 sed
@@ -715,6 +706,7 @@ ttf-dejavu
 ttf-hack
 ttf-liberation
 ttf-linux-libertine-g
+ttf-opensans
 tumbler
 twolame
 tzdata
