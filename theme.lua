@@ -93,6 +93,15 @@ theme.volume = lain.widget.alsa({
     end
 })
 
+-- Battery
+local bat = lain.widget.bat({
+    settings = function()
+        local perc = bat_now.perc .. "% "
+        if bat_now.ac_status == 1 then perc = "↯ " end
+        widget:set_markup(markup.font(theme.font, markup(gray, "bat ") .. perc))
+    end
+})
+
 -- Separators
 local first = wibox.widget.textbox(markup.font("Terminus 4", " "))
 local spr   = wibox.widget.textbox(' ')
@@ -185,6 +194,7 @@ function theme.at_screen_connect(s)
             --theme.mail.widget,
             cpu.widget,
             mem.widget,
+            bat,
             theme.volume,
             s.mytxtlayoutbox,
             mytextclock
