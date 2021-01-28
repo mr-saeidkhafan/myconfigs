@@ -2,7 +2,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'bling/vim-bufferline'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
+
+" highlight whitespaces
+let g:better_whitespace_enabled=1
 
 " changing the super key in insert mode
 imap jj <Esc>

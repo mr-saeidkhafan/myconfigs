@@ -67,16 +67,9 @@ alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh && cd -"
 
 # path and python path
 export PATH=$PATH:/home/core/.local/bin
-export PATH=$PATH:/usr/lib/jvm/default/bin
-export PYTHONPATH="/bin/python3.8"
-export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
-export ANDROID_HOME="/home/core/.buildozer/android/platform/android-sdk"
-export ANDROID_SDK="/home/core/.buildozer/android/platform/android-sdk"
-export ANDROIDNDK="/home/core/.buildozer/android/platform/android-ndk-r19c"
-export ANDROIDAPI="27"  # Target API version of your application
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/usr/lib/jvm/java-14-openjdk/bin/
+export PYTHONPATH="/bin/python3.9"
+export JAVA_HOME='/usr/lib/jvm/java-14-openjdk'
 
 # bash completion
 complete -cf sudo
