@@ -11,9 +11,6 @@ sudo mount -o loop /path/of/diskimage.iso /mnt/iso/
 # unset opts
 unset JAVA_OPTS
 
-# build with python for android
-p4a apk --private $HOME/mydir/projects/kivy/main.py --package=org.example.myapp --name "My application" --version 0.1 --bootstrap=sdl2 --requirements=python3,kivy
-
 # key import error
 gpg --keyserver keyserver.ubuntu.com --recv-keys 4773BD5E130D1D45
 
@@ -38,3 +35,9 @@ Section "Screen"
     Option         "TripleBuffer" "on"
 EndSection
 
+# save as sudo in vim without exiting vim
+:w !sudo tee %
+
+# some optimizing things
+- reduce swappiness
+- enable disk hdd cache
