@@ -3,10 +3,14 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'bling/vim-bufferline'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " highlight whitespaces
 let g:better_whitespace_enabled=1
+
+" auto close brackets
+let g:AutoPairsFlyMode = 1
 
 " changing the super key in insert mode
 imap jj <Esc>
@@ -84,8 +88,8 @@ set guifont=Hack
 set backspace=indent,eol,start
 
 " custom colors
-set background=dark
 set termguicolors
+set background=dark
 
 hi Visual ctermfg=black guifg=black guibg=white ctermbg=white
 hi Pmenu ctermfg=lightgray guifg=lightgrey guibg=black  ctermbg=black

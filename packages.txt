@@ -6,7 +6,6 @@ adobe-source-code-pro-fonts
 adobe-source-sans-pro-fonts
 adobe-source-serif-pro-fonts
 adwaita-icon-theme
-alsa-card-profiles
 alsa-lib
 alsa-plugins
 alsa-topology-conf
@@ -41,6 +40,7 @@ bleachbit
 bluez-libs
 boost-libs
 botan
+box2d
 brotli
 btrfs-progs
 bubblewrap
@@ -68,6 +68,7 @@ convertlit
 copyq
 coreutils
 cowsay
+cracklib
 cryptsetup
 ctags
 cuda-9.1
@@ -149,6 +150,7 @@ glibmm
 glslang
 gmp
 gnome-desktop
+gnome-disk-utility
 gnome-screenshot
 gnome-sound-recorder
 gnome-themes-extra
@@ -222,6 +224,7 @@ kchmviewer
 keyutils
 kmod
 krb5
+kwayland
 l-smash
 lame
 lapack
@@ -306,6 +309,7 @@ libidn2
 libiec61883
 libimobiledevice
 libindicator-gtk3
+libinih
 libinput
 libisofs
 libixion
@@ -359,6 +363,7 @@ libpng
 libproxy
 libpsl
 libpulse
+libpwquality
 libqxp
 libraw
 libraw1394
@@ -498,6 +503,7 @@ mtdev
 mtpfs
 mtr
 mujs
+musescore
 mypaint-brushes1
 ncurses
 ndctl
@@ -565,6 +571,8 @@ poppler
 poppler-data
 poppler-glib
 popt
+portaudio
+portmidi
 potrace
 procps-ng
 psmisc
@@ -611,8 +619,11 @@ python-webencodings
 qbittorrent
 qt5-base
 qt5-declarative
+qt5-graphicaleffects
 qt5-imageformats
 qt5-location
+qt5-quickcontrols
+qt5-quickcontrols2
 qt5-script
 qt5-sensors
 qt5-styleplugins
@@ -620,8 +631,10 @@ qt5-svg
 qt5-tools
 qt5-wayland
 qt5-webchannel
+qt5-webengine
 qt5-webkit
 qt5-x11extras
+qt5-xmlpatterns
 qt5ct
 quazip
 raptor
