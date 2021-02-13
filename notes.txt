@@ -32,5 +32,8 @@ EndSection
 :w !sudo tee %
 
 # some optimizing things
-- reduce swappiness
-- enable disk hdd cache
+- reduce swappiness (/etc/sysctl.d/99-swappiness.conf) -> vm.swappiness=10
+- enable disk hdd cache (with gnome-disk-utility)
+
+# qt5ct to /etc/environment
+QT_QPA_PLATFORMTHEME=qt5ct
