@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# sudo bash completion
+complete -cf sudo
+
 # vi mode for bash
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'
@@ -41,6 +44,7 @@ alias dir="dir --color=auto"
 alias ip="ip -color=auto"
 alias diff="diff --color=auto"
 alias dmesg="dmesg --color=always"
+alias cmatrix="cmatrix -b -u 9"
 
 # less config
 export LESS=-R
@@ -67,9 +71,6 @@ alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh && cd -"
 
 # path and python path
 export PATH=$PATH:/home/core/.local/bin
-export PATH=$PATH:/usr/lib/jvm/java-14-openjdk/bin/
+# export PATH=$PATH:/usr/lib/jvm/java-14-openjdk/bin/
 export PYTHONPATH="/bin/python3.9"
-export JAVA_HOME='/usr/lib/jvm/java-14-openjdk'
-
-# bash completion
-complete -cf sudo
+# export JAVA_HOME='/usr/lib/jvm/java-14-openjdk'

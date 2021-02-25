@@ -54,6 +54,9 @@ vnoremap <C-c> "+y
 map <C-PageUp> :bp<CR>
 map <C-PageDown> :bn<CR>
 
+" no highlight
+map <C-n> :noh<CR>
+
 " cursor custom style
 if &term =~? "xterm" || &term =~? "rxvt"
 	let &t_SI = "\<Esc>[6 q"
@@ -66,7 +69,7 @@ map <c-c><c-c> :bd!<CR>
 
 " setters
 set hidden
-set mouse=a
+" set mouse=a
 set hlsearch
 set incsearch
 set smartcase
