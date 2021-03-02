@@ -3,7 +3,6 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'bling/vim-bufferline'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " highlight whitespaces
@@ -67,7 +66,18 @@ endif
 " delete buffer
 map <c-c><c-c> :bd!<CR>
 
+" change line position
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
 " setters
+set number
 set hidden
 " set mouse=a
 set hlsearch
@@ -80,14 +90,12 @@ set smarttab
 set expandtab
 set autoindent
 set smartindent
-set splitbelow
-set splitright
 set noswapfile
+set nobackup
 set laststatus=2
 set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L
-set scrolloff=7
+set scrolloff=8
 set fileformat=unix
-set guifont=Hack
 set backspace=indent,eol,start
 
 " custom colors
@@ -101,7 +109,6 @@ hi Normal guibg=black ctermfg=white guifg=white
 hi NonText guibg=black
 hi Search guifg=white ctermfg=white guibg=black ctermbg=black gui=bold cterm=bold,reverse
 hi Cursor guibg=NONE guifg=NONE gui=reverse
-
 " gui stuffs
 set guioptions -=m
 set guioptions -=T
