@@ -8,9 +8,6 @@ call plug#end()
 " highlight whitespaces
 let g:better_whitespace_enabled=1
 
-" auto close brackets
-let g:AutoPairsFlyMode = 1
-
 " changing the super key in insert mode
 imap jj <Esc>
 
@@ -76,10 +73,21 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+" fix wraping
+nnoremap j gj
+nnoremap k gk
+nnoremap $ g$
+nnoremap ^ g^
+nnoremap 0 g^
+vnoremap j gj
+vnoremap k gk
+vnoremap $ g$
+vnoremap ^ g^
+vnoremap 0 g^
+
 " setters
-set number
+set wrap linebreak nolist
 set hidden
-" set mouse=a
 set hlsearch
 set incsearch
 set smartcase
@@ -97,6 +105,7 @@ set statusline=%F%m%r%h%w%=\ %Y\ [%04l,%04v]\ %p%%\ %L
 set scrolloff=8
 set fileformat=unix
 set backspace=indent,eol,start
+set arabicshape!
 
 " custom colors
 set termguicolors
@@ -110,9 +119,7 @@ hi NonText guibg=black
 hi Search guifg=white ctermfg=white guibg=black ctermbg=black gui=bold cterm=bold,reverse
 hi Cursor guibg=NONE guifg=NONE gui=reverse
 " gui stuffs
-set guioptions -=m
-set guioptions -=T
-set guioptions +=a
-
+set guioptions-=m
+set guioptions-=T
+set guioptions+=a
 set laststatus=0
-
