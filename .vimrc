@@ -86,6 +86,7 @@ vnoremap ^ g^
 vnoremap 0 g^
 
 " setters
+set number
 set wrap linebreak nolist
 set hidden
 set hlsearch
