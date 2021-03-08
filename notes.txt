@@ -1,4 +1,5 @@
-# Learn Linux 101:  Process execution priorities
+# Learn Linux 101:  Maintain the integrity of filesystems
+- The tune2fs command
 
 # grap disk image
 sudo dd if=/dev/sr0 of=/home/core/english.iso status=progress conv=sync,noerror bs=1M
@@ -38,9 +39,13 @@ EndSection
 # qt5ct to /etc/environment
 QT_QPA_PLATFORMTHEME=qt5ct
 
-# remove everything  except
+# remove everything except
 shopt -s extglob
 rm -v !("filename1"|"filename2")
 
-# xelatex use in .tex
+# xelatex use in begining of .tex
 % !TEX program = xelatex
+
+# sasm fix
+in first line -> %include "io64.inc"
+change _start to CMAIN

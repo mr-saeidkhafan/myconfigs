@@ -1,3 +1,5 @@
+0ad
+0ad-data
 a52dec
 aalib
 acl
@@ -25,6 +27,7 @@ automake
 avahi
 base
 bash
+bind
 binutils
 bison
 blas
@@ -64,6 +67,7 @@ djvulibre
 dkms
 dmraid
 dnssec-anchors
+dosbox
 dosfstools
 double-conversion
 e2fsprogs
@@ -71,12 +75,14 @@ egl-wayland
 eglexternalplatform
 elfutils
 enchant
+enet
 evince
 exiv2
 exo
 expat
 faad2
 fakeroot
+fasm
 ffmpeg
 fftw
 file
@@ -85,6 +91,7 @@ findutils
 firefox
 flac
 flex
+fmt
 fontconfig
 freetype2
 fribidi
@@ -98,6 +105,8 @@ gcc
 gcc-libs
 gcr
 gd
+gdb
+gdb-common
 gdbm
 gdk-pixbuf2
 gedit
@@ -111,7 +120,9 @@ glib-networking
 glib2
 glibc
 glibmm
+gloox
 glslang
+glu
 gmp
 gnome-desktop
 gnome-disk-utility
@@ -186,6 +197,8 @@ lapack
 lcms2
 ldns
 less
+lib32-gcc-libs
+lib32-glibc
 libabw
 libaio
 libappindicator-gtk3
@@ -267,8 +280,10 @@ liblangtag
 libldap
 libmad
 libmatroska
+libmaxminddb
 libmfx
 libmicrohttpd
+libmikmod
 libmm-glib
 libmng
 libmnl
@@ -350,6 +365,7 @@ libupnp
 libusb
 libusbmuxd
 libutempter
+libuv
 libva
 libvdpau
 libvisio
@@ -409,6 +425,7 @@ linux-lts
 linux-lts-headers
 llvm-libs
 lm_sensors
+lmdb
 lpsolve
 lsof
 lua52
@@ -422,6 +439,7 @@ man-db
 md4c
 mdadm
 mesa
+miniupnpc
 minizip
 mkinitcpio
 mkinitcpio-busybox
@@ -432,6 +450,7 @@ mpv
 mtdev
 mtpfs
 mujs
+nasm
 ncurses
 ndctl
 neofetch
@@ -453,6 +472,7 @@ nvidia-390xx-utils
 openal
 opencore-amr
 opencv
+opendesktop-fonts
 openexr
 openjpeg2
 openmpi
@@ -462,6 +482,7 @@ openssl
 openvpn
 opus
 orc
+otf-ipafont
 p11-kit
 p7zip
 pacman
@@ -500,7 +521,6 @@ psmisc
 pulseaudio
 python
 python-appdirs
-python-asn1crypto
 python-cachecontrol
 python-cffi
 python-chardet
@@ -555,15 +575,20 @@ rtkit
 rubberband
 run-parts
 rust
+sasm
 sdl
 sdl2
+sdl_net
+sdl_sound
 seahorse
 sed
 shaderc
 shadow
 shared-mime-info
 slang
+smpeg
 sound-theme-freedesktop
+source-highlight
 speedcrunch
 speex
 speexdsp
@@ -616,10 +641,16 @@ torbrowser-launcher
 torsocks
 tracker3
 tslib
+ttf-arphic-ukai
+ttf-arphic-uming
+ttf-baekmuk
 ttf-dejavu
 ttf-hack
+ttf-hannom
 ttf-liberation
 ttf-opensans
+ttf-sazanami
+ttf-ubuntu-font-family
 ttf-x2
 tumbler
 twolame
@@ -634,6 +665,7 @@ util-linux
 util-linux-libs
 v4l-utils
 vamp-plugin-sdk
+vi
 vid.stab
 virtualbox
 virtualbox-host-dkms
@@ -651,6 +683,11 @@ webrtc-audio-processing
 which
 wireless_tools
 wpa_supplicant
+wqy-bitmapfont
+wqy-microhei
+wqy-zenhei
+wxgtk-common
+wxgtk3
 x264
 x265
 xarchiver
