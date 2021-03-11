@@ -10,7 +10,6 @@ set -o vi
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 bind -m vi-command 'v: ""'
-bind '"jj":vi-movement-mode'
 
 # git branch
 parse_git_branch() {

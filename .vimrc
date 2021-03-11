@@ -8,9 +8,6 @@ call plug#end()
 " highlight whitespaces
 let g:better_whitespace_enabled=1
 
-" changing the super key in insert mode
-imap jj <Esc>
-
 " undotree
 nnoremap <F5> :UndotreeToggle<cr>
 
@@ -40,7 +37,7 @@ map <F6> :!pylint %<CR>
 " run python
 map <F8> :w \| term python %<CR>
 
-" for opening my file manager
+" for opening my file explorer
 map <F9> :!thunar $(dirname %) &<CR>
 
 " map copy past everywhere!
@@ -66,18 +63,11 @@ map <c-c><c-c> :bd!<CR>
 " fix wraping
 nnoremap j gj
 nnoremap k gk
-nnoremap $ g$
-nnoremap ^ g^
-nnoremap 0 g^
 vnoremap j gj
 vnoremap k gk
-vnoremap $ g$
-vnoremap ^ g^
-vnoremap 0 g^
 
 " setters
 set number
-set wrap linebreak nolist
 set hidden
 set hlsearch
 set incsearch
