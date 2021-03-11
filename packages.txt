@@ -32,6 +32,7 @@ binutils
 bison
 blas
 bluez-libs
+bochs
 boost-libs
 borna-fonts
 box2d
@@ -82,7 +83,6 @@ exo
 expat
 faad2
 fakeroot
-fasm
 ffmpeg
 fftw
 file
@@ -105,8 +105,6 @@ gcc
 gcc-libs
 gcr
 gd
-gdb
-gdb-common
 gdbm
 gdk-pixbuf2
 gedit
@@ -197,8 +195,6 @@ lapack
 lcms2
 ldns
 less
-lib32-gcc-libs
-lib32-glibc
 libabw
 libaio
 libappindicator-gtk3
@@ -209,6 +205,7 @@ libasyncns
 libatasmart
 libatomic_ops
 libavc1394
+libavif
 libblockdev
 libbluray
 libburn
@@ -233,6 +230,7 @@ libdbusmenu-gtk3
 libdbusmenu-qt5
 libdc1394
 libdca
+libde265
 libdrm
 libdv
 libdvbpsi
@@ -261,6 +259,7 @@ libgudev
 libgusb
 libgxps
 libhandy
+libheif
 libibus
 libice
 libid3tag
@@ -415,6 +414,7 @@ libxtst
 libxv
 libxxf86vm
 libyaml
+libyuv
 libzmf
 licenses
 lightdm
@@ -575,7 +575,6 @@ rtkit
 rubberband
 run-parts
 rust
-sasm
 sdl
 sdl2
 sdl_net
@@ -588,7 +587,6 @@ shared-mime-info
 slang
 smpeg
 sound-theme-freedesktop
-source-highlight
 speedcrunch
 speex
 speexdsp
@@ -599,6 +597,7 @@ srt
 stardict
 startup-notification
 sudo
+svt-av1
 sysfsutils
 systemd
 systemd-libs
