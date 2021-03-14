@@ -30,7 +30,6 @@ endfunc
 let g:fzf_preview_window = 'right:60%'
 nnoremap <C-p> :FZF --preview=head\ -50\ {}<Cr>
 
-" SHORTCUTS
 " pylint
 map <F6> :!pylint %<CR>
 
@@ -39,9 +38,6 @@ map <F8> :w \| term python %<CR>
 
 " for opening my file explorer
 map <F9> :!thunar $(dirname %) &<CR>
-
-" map copy past everywhere!
-vnoremap <C-c> "+y
 
 " next and previous buffers
 map <C-PageUp> :bp<CR>
@@ -59,12 +55,6 @@ endif
 
 " delete buffer
 map <c-c><c-c> :bd!<CR>
-
-" fix wraping
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
 
 " setters
 set number
@@ -99,8 +89,10 @@ hi Normal guibg=black ctermfg=white guifg=white
 hi NonText guibg=black
 hi Search guifg=white ctermfg=white guibg=black ctermbg=black gui=bold cterm=bold,reverse
 hi Cursor guibg=NONE guifg=NONE gui=reverse
+
 " gui stuffs
 set guioptions-=m
 set guioptions-=T
 set guioptions+=a
 set laststatus=0
+set clipboard=unnamedplus
