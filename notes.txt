@@ -1,4 +1,4 @@
-# Learn Linux 101:  Maintain the integrity of filesystems
+# Learn Linux 101: Maintain the integrity of filesystems
 - The tune2fs command
 
 # grap disk image
@@ -54,3 +54,5 @@ dd if=boot.bin of=floppy.img seek=0 count=1 conv=notrunc
 # makepkg speedup
 https://wiki.archlinux.org/index.php/makepkg#Tips_and_tricks
 
+# showing os date
+sudo tune2fs -l /dev/sda2 |grep "created"

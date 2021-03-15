@@ -82,12 +82,12 @@ set arabicshape!
 set termguicolors
 set background=dark
 
-hi Visual ctermfg=black guifg=black guibg=white ctermbg=white
-hi Pmenu ctermfg=lightgray guifg=lightgrey guibg=black  ctermbg=black
+hi Visual guifg=black guibg=white
+hi Pmenu guifg=lightgrey guibg=black
 hi PmenuSel guifg=white guibg=black cterm=bold,reverse
-hi Normal guibg=black ctermfg=white guifg=white
+hi Normal guibg=black guifg=white
 hi NonText guibg=black
-hi Search guifg=white ctermfg=white guibg=black ctermbg=black gui=bold cterm=bold,reverse
+hi Search guifg=black guibg=white
 hi Cursor guibg=NONE guifg=NONE gui=reverse
 
 " gui stuffs
@@ -95,4 +95,5 @@ set guioptions-=m
 set guioptions-=T
 set guioptions+=a
 set laststatus=0
+set guifont=Liberation\ Mono\ Regular\ 11
 set clipboard=unnamedplus
