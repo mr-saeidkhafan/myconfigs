@@ -56,6 +56,10 @@ endif
 " delete buffer
 map <c-c><c-c> :bd!<CR>
 
+" copy to clipboard
+nnoremap <C-S-c> "+y
+vnoremap <C-S-c> "+y
+
 " setters
 set number
 set hidden
@@ -96,4 +100,3 @@ set guioptions-=T
 set guioptions+=a
 set laststatus=0
 set guifont=Liberation\ Mono\ Regular\ 11
-set clipboard=unnamedplus
