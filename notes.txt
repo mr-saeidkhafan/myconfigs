@@ -1,5 +1,5 @@
-# Learn Linux 101: Maintain the integrity of filesystems
-- The tune2fs command
+# Learn Linux 101: Manage file permissions and ownership
+- The eleventh character
 
 # grap disk image
 sudo dd if=/dev/sr0 of=/home/core/english.iso status=progress conv=sync,noerror bs=1M
@@ -7,9 +7,6 @@ sudo dd if=/dev/sr0 of=/home/core/english.iso status=progress conv=sync,noerror 
 # mount iso image
 mkdir /mnt/iso
 sudo mount -o loop /path/of/diskimage.iso /mnt/iso/
-
-# unset opts
-unset JAVA_OPTS
 
 # nvidia /etc/X11/xorg.conf.d/20-nvidia.conf
 Section "Device"
@@ -56,3 +53,6 @@ https://wiki.archlinux.org/index.php/makepkg#Tips_and_tricks
 
 # showing os date
 sudo tune2fs -l /dev/sda2 |grep "created"
+
+# recording screen
+ffmpeg -video_size 1366x768 -framerate 30 -f x11grab -i $DISPLAY $HOME/output.mp4

@@ -1,2 +1,2 @@
 notify-send 'FFMPEG RECORDING' 'now screen is recording with full size of the screen' -i /usr/share/icons/Papirus-Dark/64x64/devices/camera-web.svg
-ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i $DISPLAY /home/core/output.mp4; notify-send 'RECORD HAS BEEN STOPED' 'recording was stop by user and video is saved in home directory' -i /usr/share/icons/Papirus-Dark/64x64/devices/media-memory-sd.svg
+ffmpeg -video_size 1366x768 -framerate 30 -f x11grab -i $DISPLAY /home/core/output.mp4; notify-send 'RECORD HAS BEEN STOPED' 'recording was stop by user and video is saved in home directory' -i /usr/share/icons/Papirus-Dark/64x64/devices/media-memory-sd.svg
