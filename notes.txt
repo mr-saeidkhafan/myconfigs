@@ -54,5 +54,5 @@ https://wiki.archlinux.org/index.php/makepkg#Tips_and_tricks
 # showing os date
 sudo tune2fs -l /dev/sda2 |grep "created"
 
-# recording screen
-ffmpeg -video_size 1366x768 -framerate 30 -f x11grab -i $DISPLAY $HOME/output.mp4
+# recording screen with mic
+ffmpeg -video_size 1366x768 -framerate 30 -f x11grab -i $DISPLAY -f pulse -ac 2 -i default -acodec libmp3lame -ab 64k $HOME/output-$(date '+%Y-%m-%d_%R').mp4
