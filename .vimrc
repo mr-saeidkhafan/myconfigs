@@ -83,6 +83,7 @@ set backspace=indent,eol,start
 set splitbelow
 set splitright
 set arabicshape!
+set timeoutlen=1000 ttimeoutlen=0
 
 " custom colors
 set termguicolors
