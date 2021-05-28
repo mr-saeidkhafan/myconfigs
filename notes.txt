@@ -1,5 +1,5 @@
-# Learn Linux 101: Manage file permissions and ownership
-- The eleventh character
+# Learn Linux 101: Create and change hard and symbolic links
+- 
 
 # grap disk image
 sudo dd if=/dev/sr0 of=/home/core/english.iso status=progress conv=sync,noerror bs=1M
@@ -54,5 +54,8 @@ https://wiki.archlinux.org/index.php/makepkg#Tips_and_tricks
 # showing os date
 sudo tune2fs -l /dev/sda2 |grep "created"
 
-# recording screen with mic
-ffmpeg -video_size 1366x768 -framerate 30 -f x11grab -i $DISPLAY -f pulse -ac 2 -i default -acodec libmp3lame -ab 64k $HOME/output-$(date '+%Y-%m-%d_%R').mp4
+# recording screen with mic (for no sound remove after -f)
+ffmpeg -video_size 1366x768 -r 30 -f x11grab -i $DISPLAY -f alsa -ac 2 -i hw:0 $HOME/output-$(date '+%Y-%m-%d_%R').mp4
+
+# fix ffmpeg video for windows or phones compatability
+ffmpeg -i input.mp4 -c:v libx264 -strict -2 -preset slow -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -f mp4 output.mp4
