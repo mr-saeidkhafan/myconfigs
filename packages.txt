@@ -1,4 +1,4 @@
-0ad 
+0ad
 0ad-data
 a52dec
 aalib
