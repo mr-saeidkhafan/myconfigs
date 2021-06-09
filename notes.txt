@@ -59,3 +59,7 @@ ffmpeg -video_size 1366x768 -r 30 -f x11grab -i $DISPLAY -f alsa -ac 2 -i hw:0 $
 
 # fix ffmpeg video for windows or phones compatability
 ffmpeg -i input.mp4 -c:v libx264 -strict -2 -preset slow -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -f mp4 output.mp4
+
+# pvpn
+crS0hSe17q91PANO
+q7iVmOEn9Ws4JIK9j5D7zRshA6VjsjD6
