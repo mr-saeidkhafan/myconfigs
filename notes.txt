@@ -63,3 +63,6 @@ ffmpeg -i input.mp4 -c:v libx264 -strict -2 -preset slow -pix_fmt yuv420p -vf "s
 # pvpn
 crS0hSe17q91PANO
 q7iVmOEn9Ws4JIK9j5D7zRshA6VjsjD6
+
+# vscode c# (windows)
+dotnet new console -n ConsoleName
