@@ -8,7 +8,7 @@ ICON="/usr/share/icons/Papirus-Dark/16x16/actions/dialog-error.svg"
 
 if [ $BATTERY_LEVEL -le 10 -a $STATUS = $NOT_CHARGING ]
 then
-    notify-send -u critical "BATTERY IS LOW" "Battery level is ${battery_level}%\nplug the power charger" -i "$ICON"
+    notify-send -u critical "BATTERY IS LOW" "Battery level is ${BATTERY_LEVEL}%\nplug the power charger" -i "$ICON"
     echo "BATTERY IS LOW! PLUG THE FUCKING CHARGER!"|festival --tts
 fi
 
