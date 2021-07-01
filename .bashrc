@@ -44,6 +44,7 @@ alias ip="ip -color=auto"
 alias diff="diff --color=auto"
 alias dmesg="dmesg --color=always"
 alias cmatrix="cmatrix -b -u 9"
+alias upinfo="sudo pacman -Syy && pacman -Qu"
 
 # less config
 export LESS=-R
@@ -70,6 +71,6 @@ alias vpnd="cd /home/core/mydir/confs/vpn/ && ./reset.sh && cd -"
 
 # path and python path
 export PATH=$PATH:/home/core/.local/bin
-# export PATH=$PATH:/usr/lib/jvm/java-14-openjdk/bin/
+export PATH=$PATH:/usr/lib/jvm/java-15-openjdk/bin/
 export PYTHONPATH="/bin/python3.9"
-# export JAVA_HOME='/usr/lib/jvm/java-14-openjdk'
+export JAVA_HOME='/usr/lib/jvm/java-15-openjdk'
