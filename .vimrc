@@ -3,11 +3,7 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'bling/vim-bufferline'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'Shirk/vim-gas'
 call plug#end()
-
-" s and S files to gas syntax highlighting
-autocmd BufNew,BufRead *.s,*.S set ft=gas
 
 " highlight whitespaces
 let g:better_whitespace_enabled=1
