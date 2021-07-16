@@ -1,6 +1,7 @@
 0ad
-adobe-source-sans-pro-fonts
-adobe-source-serif-pro-fonts
+acpi
+adobe-source-sans-fonts
+adobe-source-serif-fonts
 alsa-utils
 android-file-transfer
 arc-solid-gtk-theme
@@ -12,12 +13,13 @@ base
 bind
 bison
 bleachbit
-bochs
+bochs-sdl
 borna-fonts
 bridge-utils
 clang
 cmatrix
 cowsay
+cronie
 dmidecode
 dnsmasq
 dosbox
@@ -30,7 +32,8 @@ flex
 foliate
 fritzing
 gdb
-gedit
+gedit-plugins
+ghex
 ghidra-bin
 gnome-clocks
 gnome-disk-utility

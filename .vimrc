@@ -5,6 +5,29 @@ Plug 'bling/vim-bufferline'
 Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
+" include path improvement for python shortcut([ + ctrl i)
+setlocal path=.,**
+setlocal wildignore=*.pyc
+
+set include=^\\s*(from\\\|import\\)\s*\\zs\\(\\S\\+\\s\\{-}\\)*\\ze\\($\\\|\as\\)
+
+function! PyInclude(fname)
+    let parts = split(a:frame, ' import ')
+    let l = parts[0]
+    if len(parts) > 1
+        let r = parts[1]
+        let joined = join([l, r], '.')
+        let fp = substitute(joined, '\.', '/', 'g') . '.py'
+        let found = glob(fp, 1)
+        if len(found)
+            return found
+        endif
+    endif
+    return substitute(l, '\.', '/', 'g') . '.py'
+endfunction
+setlocal includeexpr=PyInclude(v:frame)
+setlocal define=^\\s*\\<\\(def\\\|class\\)\\>
+
 " highlight whitespaces
 let g:better_whitespace_enabled=1
 
@@ -67,7 +90,7 @@ set hlsearch
 set incsearch
 set smartcase
 set ignorecase
-set ts=4 sw=4
+set ts=4 sw=4 st=4
 set shiftwidth=4
 set smarttab
 set expandtab
@@ -82,7 +105,6 @@ set fileformat=unix
 set backspace=indent,eol,start
 set splitbelow
 set splitright
-set arabicshape!
 set timeoutlen=1000 ttimeoutlen=0
 
 " custom colors
