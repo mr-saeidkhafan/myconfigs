@@ -5,12 +5,10 @@ Plug 'bling/vim-bufferline'
 Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
-" include path improvement for python shortcut([ + ctrl i)
+" include search and path improvement for python. shortcut ([ + ctrl i) and ([ + shift i)
 setlocal path=.,**
 setlocal wildignore=*.pyc
-
 set include=^\\s*(from\\\|import\\)\s*\\zs\\(\\S\\+\\s\\{-}\\)*\\ze\\($\\\|\as\\)
-
 function! PyInclude(fname)
     let parts = split(a:frame, ' import ')
     let l = parts[0]
@@ -88,8 +86,6 @@ set number
 set hidden
 set hlsearch
 set incsearch
-set smartcase
-set ignorecase
 set ts=4 sw=4 st=4
 set shiftwidth=4
 set smarttab
